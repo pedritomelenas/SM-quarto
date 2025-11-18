@@ -11,6 +11,10 @@ format:
 
 Comprobemos el resultado obtenido con <code>gap</code>.
 
+Aquí irá la patata:
+
+{{< include doc/patata.md >}}
+
 ::: {.sage}
 <script type="text/x-sage">
 RelToDotNS:=function(uni, rel,labels)
