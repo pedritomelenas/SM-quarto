@@ -9,11 +9,10 @@
 
 ::: {.sage}
 <script type="text/x-sage">
-    sage: f= 2*x^3-3*x^2-12*x+1
-    sage: df = diff(f,x)
-		sage: df
-
-		sage: solve(df,x)
+f= 2*x^3-3*x^2-12*x+1
+df = diff(f,x)
+df
+solve(df,x)
 </script>
 :::
 
@@ -30,7 +29,7 @@ Como sabemos donde se anula la derivada, también sabemos donde *no* se anula. E
 
 ::: {.sage}
 <script type="text/x-sage">
-		sage: solve(df>0,x)
+solve(df>0,x)
 </script>
 :::
 
