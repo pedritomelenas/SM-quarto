@@ -1,6 +1,6 @@
 ## Extremos relativos
 
-::: {.callout-tip}
+::: {.callout-tip title="Teoría básica"}
 El cálculo de los máximos y mínimos relativos de una función $f$ se suele hacer en dos pasos.
 
 1. En primer lugar se calculan los puntos críticos, es decir, resolvemos la ecuación $f'(x)=0$
