@@ -1,0 +1,60 @@
+---
+title: Aplicaciones lineales
+lang: es
+format:
+   html:
+    toc: true
+    html-math-method: mathjax
+    page-layout: full
+    include-in-header: includes-header.html
+---
+
+Comprobemos el resultado obtenido con <code>gap</code>.
+
+::: {.sage}
+<script type="text/x-sage">
+RelToDotNS:=function(uni, rel,labels)
+
+  local r, output, out, i, str;
+
+  str:=function(s)
+    return Concatenation("\"",String(s),"\"");
+  end;
+
+  out:="";
+  output:=OutputTextString(out,true);
+  AppendTo(output,"graph  NSGraph{");
+  for i in [1..Length(uni)] do
+    AppendTo(output,i," [label=",str(labels[i]),"];\n");
+  od;
+  for r in rel do
+    AppendTo(output,Position(uni,r[1])," -- ",Position(uni,r[2]),";\n");
+  od;
+  AppendTo(output,"}");
+  CloseStream(output);
+  return out;
+end;
+</script>
+:::
+
+
+Un poco después uso `a` de nuevo.
+
+::: {.sage}
+<script type="text/x-sage">
+Print(RelToDotNS([1,2,3],[[1,2],[1,3]],[1,2,3]));
+</script>
+:::
+
+## La salida
+
+y esto produce
+
+```{dot}
+graph  NSGraph{1 [label="1"];
+2 [label="2"];
+3 [label="3"];
+1 -- 2;
+1 -- 3;
+}
+```
